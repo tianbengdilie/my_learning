@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package demo;
+
+message Person {
+	// optional - 当前field可选，在不被设置时，采用默认值填充
+	optional string name = 1;
+	optional int32 id = 2;
+	optional string email = 3;
+
+	enum PhoneType {
+		MOBILE = 0;
+		HOME = 1;
+		WORK = 2;
+	}
+
+	message PhoneNumber {
+		optional string number = 1;
+		// 在proto3语法中不再支持非0的default
+		// optional PhoneType type = 2 [default = HOME];
+		optional PhoneType type = 2;
+	}
+
+	// repeated - 当前field允许被重复多次，相当于动态数据，其顺序也会被记录下来
+	repeated PhoneNumber phones = 4;
+}
+
+message AddressBook {
+	repeated Person people = 1;
+}
+
