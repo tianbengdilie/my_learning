@@ -26,6 +26,19 @@
 
 #include "tutorial.grpc.pb.h"
 
+using namespace std;
+
+string getContent(string db_path) {
+	std::ifstream db_file(db_path);
+	if (!db_file.is_open()) {
+		std::cout << "Failed to open " << db_path << std::endl;
+		return "";
+	}
+	std::stringstream db;
+	db << db_file.rdbuf();
+	return db.str();
+}
+
 namespace routeguide {
 
 std::string GetDbFileContent(int argc, char** argv) {

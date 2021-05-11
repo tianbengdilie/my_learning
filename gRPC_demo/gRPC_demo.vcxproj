@@ -123,17 +123,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gRPC_demo.cpp" />
+    <ClCompile Include="file_transfer.grpc.pb.cc" />
+    <ClCompile Include="file_transfer.pb.cc" />
+    <ClCompile Include="file_transfer_server_demo.cpp" />
+    <ClCompile Include="official_server_demo.cpp" />
     <ClCompile Include="helper.cc" />
+    <ClCompile Include="server_main.cpp" />
     <ClCompile Include="toturial_impl.cpp" />
     <ClCompile Include="tutorial.grpc.pb.cc" />
     <ClCompile Include="tutorial.pb.cc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="file_transfer.proto" />
     <None Include="tutorial.proto" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="file_transfer.grpc.pb.h" />
+    <ClInclude Include="file_transfer.pb.h" />
     <ClInclude Include="helper.h" />
+    <ClInclude Include="server_demo.h" />
     <ClInclude Include="toturial_impl.h" />
     <ClInclude Include="tutorial.grpc.pb.h" />
     <ClInclude Include="tutorial.pb.h" />

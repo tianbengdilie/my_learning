@@ -123,15 +123,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gRPC_client_demo.cpp" />
+    <ClCompile Include="file_transfer.grpc.pb.cc" />
+    <ClCompile Include="file_transfer.pb.cc" />
+    <ClCompile Include="file_transfer_client_demo.cpp" />
+    <ClCompile Include="official_client_demo.cpp" />
     <ClCompile Include="helper.cc" />
+    <ClCompile Include="client_main.cpp" />
     <ClCompile Include="tutorial.grpc.pb.cc" />
     <ClCompile Include="tutorial.pb.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="file_transfer.grpc.pb.h" />
+    <ClInclude Include="file_transfer.pb.h" />
+    <ClInclude Include="client_demo.h" />
     <ClInclude Include="helper.h" />
     <ClInclude Include="tutorial.grpc.pb.h" />
     <ClInclude Include="tutorial.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="file_transfer.proto" />
+    <None Include="tutorial.proto" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,30 +13,65 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="official_demo">
+      <UniqueIdentifier>{d26bc62f-119d-4630-aa54-dd4be27ea253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file_server_demo">
+      <UniqueIdentifier>{430ebdf7-c17e-4806-bfc4-bab351ae4e7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gRPC_client_demo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="helper.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tutorial.grpc.pb.cc">
+    <ClCompile Include="client_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tutorial.pb.cc">
-      <Filter>Source Files</Filter>
+      <Filter>official_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="tutorial.grpc.pb.cc">
+      <Filter>official_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="helper.cc">
+      <Filter>official_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="official_client_demo.cpp">
+      <Filter>official_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="file_transfer_client_demo.cpp">
+      <Filter>file_server_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="file_transfer.grpc.pb.cc">
+      <Filter>file_server_demo</Filter>
+    </ClCompile>
+    <ClCompile Include="file_transfer.pb.cc">
+      <Filter>file_server_demo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="helper.h">
+    <ClInclude Include="client_demo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tutorial.grpc.pb.h">
-      <Filter>Header Files</Filter>
+      <Filter>official_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>official_demo</Filter>
     </ClInclude>
     <ClInclude Include="tutorial.pb.h">
-      <Filter>Header Files</Filter>
+      <Filter>official_demo</Filter>
     </ClInclude>
+    <ClInclude Include="file_transfer.pb.h">
+      <Filter>file_server_demo</Filter>
+    </ClInclude>
+    <ClInclude Include="file_transfer.grpc.pb.h">
+      <Filter>file_server_demo</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tutorial.proto">
+      <Filter>official_demo</Filter>
+    </None>
+    <None Include="file_transfer.proto">
+      <Filter>file_server_demo</Filter>
+    </None>
   </ItemGroup>
 </Project>

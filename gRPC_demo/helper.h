@@ -22,6 +22,8 @@
 #include <string>
 #include <vector>
 
+std::string getContent(std::string db_path);
+
 namespace routeguide {
 class Feature;
 
