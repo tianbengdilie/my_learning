@@ -19,8 +19,8 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace filetransfer {
 constexpr SliceRequest::SliceRequest(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : idx_(0)
-  , offset_(0){}
+  : idx_(PROTOBUF_LONGLONG(0))
+  , offset_(PROTOBUF_LONGLONG(0)){}
 struct SliceRequestDefaultTypeInternal {
   constexpr SliceRequestDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -33,9 +33,9 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SliceRequestDefaultTypeInternal
 constexpr Slice::Slice(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : data_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , idx_(0)
-  , offset_(0)
-  , length_(0){}
+  , idx_(PROTOBUF_LONGLONG(0))
+  , offset_(PROTOBUF_LONGLONG(0))
+  , length_(PROTOBUF_LONGLONG(0)){}
 struct SliceDefaultTypeInternal {
   constexpr SliceDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -47,9 +47,9 @@ struct SliceDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SliceDefaultTypeInternal _Slice_default_instance_;
 constexpr FileMetadata::FileMetadata(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : blockcount_(0)
-  , blocksize_(0)
-  , filesize_(0){}
+  : blockcount_(PROTOBUF_LONGLONG(0))
+  , blocksize_(PROTOBUF_LONGLONG(0))
+  , filesize_(PROTOBUF_LONGLONG(0)){}
 struct FileMetadataDefaultTypeInternal {
   constexpr FileMetadataDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -122,11 +122,11 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_file_5ftransfer_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\023file_transfer.proto\022\014filetransfer\"+\n\014S"
-  "liceRequest\022\013\n\003idx\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005"
-  "\"B\n\005Slice\022\013\n\003idx\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005\022\016"
-  "\n\006length\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"G\n\014FileMeta"
-  "data\022\022\n\nblockCount\030\001 \001(\005\022\021\n\tblockSize\030\002 "
-  "\001(\005\022\020\n\010fileSize\030\003 \001(\005\"\n\n\010FileName2\220\001\n\nFi"
+  "liceRequest\022\013\n\003idx\030\001 \001(\003\022\016\n\006offset\030\002 \001(\003"
+  "\"B\n\005Slice\022\013\n\003idx\030\001 \001(\003\022\016\n\006offset\030\002 \001(\003\022\016"
+  "\n\006length\030\003 \001(\003\022\014\n\004data\030\004 \001(\014\"G\n\014FileMeta"
+  "data\022\022\n\nblockCount\030\001 \001(\003\022\021\n\tblockSize\030\002 "
+  "\001(\003\022\020\n\010fileSize\030\003 \001(\003\"\n\n\010FileName2\220\001\n\nFi"
   "leServer\022=\n\010getSlice\022\032.filetransfer.Slic"
   "eRequest\032\023.filetransfer.Slice\"\000\022C\n\013getMe"
   "taData\022\026.filetransfer.FileName\032\032.filetra"
@@ -216,14 +216,14 @@ const char* SliceRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int32 idx = 1;
+      // int64 idx = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 offset = 2;
+      // int64 offset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
@@ -258,16 +258,16 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 idx = 1;
+  // int64 idx = 1;
   if (this->idx() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_idx(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_idx(), target);
   }
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   if (this->offset() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_offset(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_offset(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -286,17 +286,17 @@ size_t SliceRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 idx = 1;
+  // int64 idx = 1;
   if (this->idx() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_idx());
   }
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   if (this->offset() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_offset());
   }
 
@@ -448,21 +448,21 @@ const char* Slice::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::inte
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int32 idx = 1;
+      // int64 idx = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 offset = 2;
+      // int64 offset = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           offset_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 length = 3;
+      // int64 length = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           length_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
@@ -505,22 +505,22 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 idx = 1;
+  // int64 idx = 1;
   if (this->idx() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_idx(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_idx(), target);
   }
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   if (this->offset() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_offset(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_offset(), target);
   }
 
-  // int32 length = 3;
+  // int64 length = 3;
   if (this->length() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_length(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_length(), target);
   }
 
   // bytes data = 4;
@@ -552,24 +552,24 @@ size_t Slice::ByteSizeLong() const {
         this->_internal_data());
   }
 
-  // int32 idx = 1;
+  // int64 idx = 1;
   if (this->idx() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_idx());
   }
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   if (this->offset() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_offset());
   }
 
-  // int32 length = 3;
+  // int64 length = 3;
   if (this->length() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_length());
   }
 
@@ -720,21 +720,21 @@ const char* FileMetadata::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // int32 blockCount = 1;
+      // int64 blockCount = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           blockcount_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 blockSize = 2;
+      // int64 blockSize = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
           blocksize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 fileSize = 3;
+      // int64 fileSize = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           filesize_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
@@ -769,22 +769,22 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 blockCount = 1;
+  // int64 blockCount = 1;
   if (this->blockcount() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_blockcount(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_blockcount(), target);
   }
 
-  // int32 blockSize = 2;
+  // int64 blockSize = 2;
   if (this->blocksize() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_blocksize(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_blocksize(), target);
   }
 
-  // int32 fileSize = 3;
+  // int64 fileSize = 3;
   if (this->filesize() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_filesize(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_filesize(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -803,24 +803,24 @@ size_t FileMetadata::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // int32 blockCount = 1;
+  // int64 blockCount = 1;
   if (this->blockcount() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_blockcount());
   }
 
-  // int32 blockSize = 2;
+  // int64 blockSize = 2;
   if (this->blocksize() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_blocksize());
   }
 
-  // int32 fileSize = 3;
+  // int64 fileSize = 3;
   if (this->filesize() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_filesize());
   }
 

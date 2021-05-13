@@ -194,22 +194,22 @@ class SliceRequest PROTOBUF_FINAL :
     kIdxFieldNumber = 1,
     kOffsetFieldNumber = 2,
   };
-  // int32 idx = 1;
+  // int64 idx = 1;
   void clear_idx();
-  ::PROTOBUF_NAMESPACE_ID::int32 idx() const;
-  void set_idx(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 idx() const;
+  void set_idx(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_idx() const;
-  void _internal_set_idx(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_idx() const;
+  void _internal_set_idx(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   void clear_offset();
-  ::PROTOBUF_NAMESPACE_ID::int32 offset() const;
-  void set_offset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 offset() const;
+  void set_offset(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_offset() const;
-  void _internal_set_offset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_offset() const;
+  void _internal_set_offset(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // @@protoc_insertion_point(class_scope:filetransfer.SliceRequest)
@@ -219,8 +219,8 @@ class SliceRequest PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::int32 idx_;
-  ::PROTOBUF_NAMESPACE_ID::int32 offset_;
+  ::PROTOBUF_NAMESPACE_ID::int64 idx_;
+  ::PROTOBUF_NAMESPACE_ID::int64 offset_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_file_5ftransfer_2eproto;
 };
@@ -360,31 +360,31 @@ class Slice PROTOBUF_FINAL :
   std::string* _internal_mutable_data();
   public:
 
-  // int32 idx = 1;
+  // int64 idx = 1;
   void clear_idx();
-  ::PROTOBUF_NAMESPACE_ID::int32 idx() const;
-  void set_idx(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 idx() const;
+  void set_idx(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_idx() const;
-  void _internal_set_idx(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_idx() const;
+  void _internal_set_idx(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 offset = 2;
+  // int64 offset = 2;
   void clear_offset();
-  ::PROTOBUF_NAMESPACE_ID::int32 offset() const;
-  void set_offset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 offset() const;
+  void set_offset(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_offset() const;
-  void _internal_set_offset(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_offset() const;
+  void _internal_set_offset(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 length = 3;
+  // int64 length = 3;
   void clear_length();
-  ::PROTOBUF_NAMESPACE_ID::int32 length() const;
-  void set_length(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 length() const;
+  void set_length(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_length() const;
-  void _internal_set_length(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_length() const;
+  void _internal_set_length(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // @@protoc_insertion_point(class_scope:filetransfer.Slice)
@@ -395,9 +395,9 @@ class Slice PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr data_;
-  ::PROTOBUF_NAMESPACE_ID::int32 idx_;
-  ::PROTOBUF_NAMESPACE_ID::int32 offset_;
-  ::PROTOBUF_NAMESPACE_ID::int32 length_;
+  ::PROTOBUF_NAMESPACE_ID::int64 idx_;
+  ::PROTOBUF_NAMESPACE_ID::int64 offset_;
+  ::PROTOBUF_NAMESPACE_ID::int64 length_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_file_5ftransfer_2eproto;
 };
@@ -520,31 +520,31 @@ class FileMetadata PROTOBUF_FINAL :
     kBlockSizeFieldNumber = 2,
     kFileSizeFieldNumber = 3,
   };
-  // int32 blockCount = 1;
+  // int64 blockCount = 1;
   void clear_blockcount();
-  ::PROTOBUF_NAMESPACE_ID::int32 blockcount() const;
-  void set_blockcount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 blockcount() const;
+  void set_blockcount(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_blockcount() const;
-  void _internal_set_blockcount(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_blockcount() const;
+  void _internal_set_blockcount(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 blockSize = 2;
+  // int64 blockSize = 2;
   void clear_blocksize();
-  ::PROTOBUF_NAMESPACE_ID::int32 blocksize() const;
-  void set_blocksize(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 blocksize() const;
+  void set_blocksize(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_blocksize() const;
-  void _internal_set_blocksize(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_blocksize() const;
+  void _internal_set_blocksize(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // int32 fileSize = 3;
+  // int64 fileSize = 3;
   void clear_filesize();
-  ::PROTOBUF_NAMESPACE_ID::int32 filesize() const;
-  void set_filesize(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 filesize() const;
+  void set_filesize(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_filesize() const;
-  void _internal_set_filesize(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_filesize() const;
+  void _internal_set_filesize(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // @@protoc_insertion_point(class_scope:filetransfer.FileMetadata)
@@ -554,9 +554,9 @@ class FileMetadata PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::int32 blockcount_;
-  ::PROTOBUF_NAMESPACE_ID::int32 blocksize_;
-  ::PROTOBUF_NAMESPACE_ID::int32 filesize_;
+  ::PROTOBUF_NAMESPACE_ID::int64 blockcount_;
+  ::PROTOBUF_NAMESPACE_ID::int64 blocksize_;
+  ::PROTOBUF_NAMESPACE_ID::int64 filesize_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_file_5ftransfer_2eproto;
 };
@@ -695,42 +695,42 @@ class FileName PROTOBUF_FINAL :
 #endif  // __GNUC__
 // SliceRequest
 
-// int32 idx = 1;
+// int64 idx = 1;
 inline void SliceRequest::clear_idx() {
-  idx_ = 0;
+  idx_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 SliceRequest::_internal_idx() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 SliceRequest::_internal_idx() const {
   return idx_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 SliceRequest::idx() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 SliceRequest::idx() const {
   // @@protoc_insertion_point(field_get:filetransfer.SliceRequest.idx)
   return _internal_idx();
 }
-inline void SliceRequest::_internal_set_idx(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void SliceRequest::_internal_set_idx(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   idx_ = value;
 }
-inline void SliceRequest::set_idx(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void SliceRequest::set_idx(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_idx(value);
   // @@protoc_insertion_point(field_set:filetransfer.SliceRequest.idx)
 }
 
-// int32 offset = 2;
+// int64 offset = 2;
 inline void SliceRequest::clear_offset() {
-  offset_ = 0;
+  offset_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 SliceRequest::_internal_offset() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 SliceRequest::_internal_offset() const {
   return offset_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 SliceRequest::offset() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 SliceRequest::offset() const {
   // @@protoc_insertion_point(field_get:filetransfer.SliceRequest.offset)
   return _internal_offset();
 }
-inline void SliceRequest::_internal_set_offset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void SliceRequest::_internal_set_offset(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   offset_ = value;
 }
-inline void SliceRequest::set_offset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void SliceRequest::set_offset(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_offset(value);
   // @@protoc_insertion_point(field_set:filetransfer.SliceRequest.offset)
 }
@@ -739,62 +739,62 @@ inline void SliceRequest::set_offset(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // Slice
 
-// int32 idx = 1;
+// int64 idx = 1;
 inline void Slice::clear_idx() {
-  idx_ = 0;
+  idx_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::_internal_idx() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::_internal_idx() const {
   return idx_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::idx() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::idx() const {
   // @@protoc_insertion_point(field_get:filetransfer.Slice.idx)
   return _internal_idx();
 }
-inline void Slice::_internal_set_idx(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::_internal_set_idx(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   idx_ = value;
 }
-inline void Slice::set_idx(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::set_idx(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_idx(value);
   // @@protoc_insertion_point(field_set:filetransfer.Slice.idx)
 }
 
-// int32 offset = 2;
+// int64 offset = 2;
 inline void Slice::clear_offset() {
-  offset_ = 0;
+  offset_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::_internal_offset() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::_internal_offset() const {
   return offset_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::offset() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::offset() const {
   // @@protoc_insertion_point(field_get:filetransfer.Slice.offset)
   return _internal_offset();
 }
-inline void Slice::_internal_set_offset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::_internal_set_offset(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   offset_ = value;
 }
-inline void Slice::set_offset(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::set_offset(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_offset(value);
   // @@protoc_insertion_point(field_set:filetransfer.Slice.offset)
 }
 
-// int32 length = 3;
+// int64 length = 3;
 inline void Slice::clear_length() {
-  length_ = 0;
+  length_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::_internal_length() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::_internal_length() const {
   return length_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 Slice::length() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Slice::length() const {
   // @@protoc_insertion_point(field_get:filetransfer.Slice.length)
   return _internal_length();
 }
-inline void Slice::_internal_set_length(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::_internal_set_length(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   length_ = value;
 }
-inline void Slice::set_length(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void Slice::set_length(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_length(value);
   // @@protoc_insertion_point(field_set:filetransfer.Slice.length)
 }
@@ -864,62 +864,62 @@ inline void Slice::set_allocated_data(std::string* data) {
 
 // FileMetadata
 
-// int32 blockCount = 1;
+// int64 blockCount = 1;
 inline void FileMetadata::clear_blockcount() {
-  blockcount_ = 0;
+  blockcount_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::_internal_blockcount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::_internal_blockcount() const {
   return blockcount_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::blockcount() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::blockcount() const {
   // @@protoc_insertion_point(field_get:filetransfer.FileMetadata.blockCount)
   return _internal_blockcount();
 }
-inline void FileMetadata::_internal_set_blockcount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::_internal_set_blockcount(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   blockcount_ = value;
 }
-inline void FileMetadata::set_blockcount(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::set_blockcount(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_blockcount(value);
   // @@protoc_insertion_point(field_set:filetransfer.FileMetadata.blockCount)
 }
 
-// int32 blockSize = 2;
+// int64 blockSize = 2;
 inline void FileMetadata::clear_blocksize() {
-  blocksize_ = 0;
+  blocksize_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::_internal_blocksize() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::_internal_blocksize() const {
   return blocksize_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::blocksize() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::blocksize() const {
   // @@protoc_insertion_point(field_get:filetransfer.FileMetadata.blockSize)
   return _internal_blocksize();
 }
-inline void FileMetadata::_internal_set_blocksize(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::_internal_set_blocksize(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   blocksize_ = value;
 }
-inline void FileMetadata::set_blocksize(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::set_blocksize(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_blocksize(value);
   // @@protoc_insertion_point(field_set:filetransfer.FileMetadata.blockSize)
 }
 
-// int32 fileSize = 3;
+// int64 fileSize = 3;
 inline void FileMetadata::clear_filesize() {
-  filesize_ = 0;
+  filesize_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::_internal_filesize() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::_internal_filesize() const {
   return filesize_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 FileMetadata::filesize() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 FileMetadata::filesize() const {
   // @@protoc_insertion_point(field_get:filetransfer.FileMetadata.fileSize)
   return _internal_filesize();
 }
-inline void FileMetadata::_internal_set_filesize(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::_internal_set_filesize(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   filesize_ = value;
 }
-inline void FileMetadata::set_filesize(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void FileMetadata::set_filesize(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_filesize(value);
   // @@protoc_insertion_point(field_set:filetransfer.FileMetadata.fileSize)
 }
