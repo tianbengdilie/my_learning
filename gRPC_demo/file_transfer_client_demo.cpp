@@ -36,17 +36,18 @@ void fileTransfer_asyn_demo() {
 		grpc::ClientContext ctx;
 		FileName filename;
 
+		// 初始化一个 completionQueue充当连接
 		grpc::CompletionQueue cq;
 		unique_ptr<grpc::ClientAsyncResponseReader<FileMetadata>> rpc(stub->AsyncgetMetaData(&ctx, filename, &cq));
 
 		FileMetadata md;
 		grpc::Status status;
-		// 通过唯一标志，请求回复
+		// 通过唯一标志，请求回复，至此才是真正开始请求
 		rpc->Finish(&md, &status, (void*)1024);
 
 		void* tag;
 		bool ok = false;
-		// 阻塞，知道rpc完成
+		// 阻塞，直到rpc完成
 		cq.Next(&tag, &ok);
 
 		if(tag != (void*) 1024 || !ok) {
